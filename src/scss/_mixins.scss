@@ -1,2 +1,13 @@
 @import "./mixins/burger";
 @import "./mixins/font-face";
+
+
+@mixin click-area() {
+    content: '';
+    position: absolute;
+    display: block;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+}
