@@ -13,23 +13,26 @@ const options = {
             fields: "0.9375rem" // side fields - 15px
         },
         breakPoints: {
-            xs: {
+            xxs: {
                 width: "320px" // 320px
             },
+            xs: {
+                width: "375x" // 375px
+            },
             sm: {
-                width: "600px" // 600px
+                width: "768x" // 768x
             },
             md: {
-                width: "768px" // 768px
+                width: "1024x" // 1024x
             },
             lg: {
-                width: "992px" // 992px
+                width: "1280px" // 1280px
             },
             xl: {
                 width: "1440px" // 1440px
             },
-            xxl: {
-                width: "1960px" // 1960px
+            zl: {
+                width: "1920px" // 1920px
             }
         }
 };

@@ -13,6 +13,8 @@
 	<link rel="stylesheet" href="css/global.css">
 	<link rel="stylesheet" href="css/vendor.css">
 	<link rel="stylesheet" href="css/main.css">
+
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 </head>
 
 <body>
@@ -21,14 +23,33 @@
 
 		@include('partials/header.html')
 
+		<div class="sliader">
+
+		</div>
+
 		@include('partials/about.html')
+
+		@include('partials/equipment.html')
+
+		@include('partials/production.html')
+
+		@include('partials/relatedproducts.html')
+
+		@include('partials/coffeehouse.html')
+
+		@include('partials/news_mainpage.html')
 
 		@include('partials/footer.html')
 
 	</div>
 
+	@include('partials/adaptive_menu.html')
+
 	<script src="js/vendor.js"></script>
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 	<script src="js/main.js"></script>
+
 
 </body>
 

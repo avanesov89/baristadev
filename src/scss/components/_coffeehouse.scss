@@ -1,0 +1,92 @@
+.coffeehouse {
+    padding: 60px 0;
+    background-color: transparentize($--color-white-200, 0.4);
+
+    @include before('sm') {
+        padding: 40px 0;
+    }
+
+    .col {
+        @include col();
+        @include size-lg(6);
+        @include size(12);
+
+        &:last-child {
+            @include before('lg') {
+                display: none;
+            }
+        }
+    }
+
+    &__title {
+        display: flex;
+        flex-direction: column;
+        font-size: $--font-size-22;
+        line-height: $--line-height-34;
+        color: $--color-black-100;
+        text-transform: lowercase;
+        font-weight: $--font-weight-medium;
+
+        @include after('lg') {
+            padding-top: 25px;
+        }
+
+        @include before('lg') {
+            text-align: center;
+        }
+
+        &-small {
+            font-size: $--font-size-14;
+            line-height: $--line-height-18;
+            margin-bottom: 30px;
+
+            @include before('lg') {
+                margin-bottom: 20px;
+            }
+        }
+
+        &-span {
+            font-size: $--font-size-24;
+            line-height: $--line-height-28;
+            color: $--color-red-100;
+            font-weight: $--font-weight-black;
+            text-transform: uppercase;
+        }
+    }
+
+    &__text {
+        max-width: 420px;
+        font-size: $--font-size-14;
+        line-height: $--line-height-20;
+        margin-bottom: 40px;
+
+        @include before('lg') {
+            text-align: center;
+            margin: 0 auto 40px;
+        }
+    }
+
+    &__img {
+        border-radius: $--border-radius;
+        box-shadow: $--box-shadow;
+
+        &-card {
+            margin: 50px 0;
+            border-radius: 0;
+            box-shadow: none;
+
+            @include before('lg') {
+                margin: 50px auto 20px;
+                display: block;
+            }
+        }
+    }
+
+    .main__button {
+        margin: 0;
+
+        @include before('lg') {
+            margin: 0 auto;
+        }
+    }
+}

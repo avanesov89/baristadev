@@ -1,0 +1,47 @@
+.breadcrumbs {
+    padding: 15px 0;
+    margin-bottom: 40px;
+
+    @include before('lg') {
+        margin-bottom: 20px;
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+
+        &-item {
+            margin-right: 5px;
+            text-transform: lowercase;
+        }
+
+        &-link {
+            font-size: $--font-size-14;
+            line-height: $--line-height-18;
+            color: $--color-black-100;
+            font-weight: $--font-weight-light;
+            text-decoration: none;
+            transition: $--transition-main;
+
+            &:hover,
+            &:focus {
+                color: $--color-red-100;
+                transition: $--transition-main;
+            }
+        }
+
+        &-active {
+            font-weight: $--font-weight-regular;
+            font-size: $--font-size-14;
+            line-height: $--line-height-18;
+            color: $--color-black-100;
+        }
+    }
+
+    .svg__icon {
+        width: 8px;
+        height: 8px;
+        margin-right: 2px;
+    }
+}

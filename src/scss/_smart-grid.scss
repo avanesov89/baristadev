@@ -2,11 +2,11 @@ $columns: 12;
 $atom: (100% / $columns);
 
 $break_xs: 320px;
-$break_sm: 600px;
-$break_md: 768px;
-$break_lg: 992px;
+$break_sm: 768px;
+$break_md: 1024px;
+$break_lg: 1280px;
 $break_xl: 1440px;
-$break_xxl: 1960px;
+$break_xxl: 1920px;
 
 $offset: 1.875rem;
 $offset_xs: $offset;
@@ -42,7 +42,7 @@ $fields: 0.9375rem;
 }
 
 @mixin container() {
-    max-width: 1340px;
+    max-width: 1280px;
     margin: 0 auto;
     @include container-full();
 }
