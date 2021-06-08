@@ -1,12 +1,23 @@
 .pagination {
+    margin: 0;
+    padding: 0;
+
     &__list {
         display: flex;
         justify-content: center;
         align-items: center;
 
+        margin: 0;
+        padding: 0;
+
         &-item {
             display: flex;
             margin: 0 5px;
+            padding: 0;
+
+            &::before {
+                display: none;
+            }
 
             &--active {
                 border-color: $--color-red-100;
