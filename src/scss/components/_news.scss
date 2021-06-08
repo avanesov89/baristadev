@@ -232,24 +232,7 @@
     &-top {
         display: flex;
         flex-direction: column;
-        margin-bottom: 30px;
-
-        h1 {
-            margin: 20px 0 10px;
-            font-size: $--font-size-32;
-            line-height: $--line-height-40;
-            font-weight: $--font-weight-medium;
-
-            @include before('xl') {
-                font-size: $--font-size-26;
-                line-height: $--line-height-32;
-            }
-
-            @include before('sm') {
-                font-size: $--font-size-22;
-                line-height: $--line-height-28;
-            }
-        }
+        margin-bottom: 20px;
     }
 
     &-status {
@@ -263,13 +246,6 @@
         font-size: $--font-size-18;
         line-height: $--line-height-24;
         color: $--color-black-100;
-
-        p {
-            font-size: $--font-size-18;
-            line-height: $--line-height-24;
-            color: $--color-black-100;
-            margin-bottom: 15px;
-        }
 
         img {
             width: 100%;

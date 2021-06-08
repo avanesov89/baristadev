@@ -47,6 +47,7 @@ header {
     .main__menu {
         display: flex;
         justify-content: flex-end;
+        margin: 0;
 
         &-item {
             padding: 0 15px;

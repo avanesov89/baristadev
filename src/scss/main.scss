@@ -104,58 +104,6 @@ body {
     opacity: 1;
     transition: $--transition-main;
     border-radius: $--border-radius;
-
-    /*&-right {
-        &::before {
-            content: '';
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            background-image: url(../img/hover_bg_right-top.svg);
-            background-size: 100% 100%;
-            background-repeat: no-repeat;
-            width: 25px;
-            height: 25px;
-        }
-
-        &::after {
-            content: '';
-            position: absolute;
-            bottom: 15px;
-            right: 15px;
-            background-image: url(../img/hover_bg_right-bottom.svg);
-            background-size: 100% 100%;
-            background-repeat: no-repeat;
-            width: 25px;
-            height: 25px;
-        }
-    }
-
-    &-left {
-        &::before {
-            content: '';
-            position: absolute;
-            top: 15px;
-            left: 15px;
-            background-image: url(../img/hover_bg_left-top.svg);
-            background-size: 100% 100%;
-            background-repeat: no-repeat;
-            width: 25px;
-            height: 25px;
-        }
-
-        &::after {
-            content: '';
-            position: absolute;
-            bottom: 15px;
-            left: 15px;
-            background-image: url(../img/hover_bg_left-bottom.svg);
-            background-size: 100% 100%;
-            background-repeat: no-repeat;
-            width: 25px;
-            height: 25px;
-        }
-    }*/
 }
 
 
@@ -170,18 +118,155 @@ body {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
 .sliader {
     background: url(../img/slaider.jpg) no-repeat scroll 50% 50% / cover;
     min-height: 400px;
+}
+
+
+
+h1 {
+    margin: 20px 0;
+    font-size: $--font-size-32;
+    line-height: $--line-height-40;
+    font-weight: $--font-weight-medium;
+
+    @include before('xl') {
+        font-size: $--font-size-26;
+        line-height: $--line-height-32;
+    }
+
+    @include before('sm') {
+        font-size: $--font-size-22;
+        line-height: $--line-height-28;
+    }
+}
+
+h2 {
+    margin: 20px 0;
+    font-size: $--font-size-30;
+    line-height: $--line-height-34;
+    font-weight: $--font-weight-medium;
+
+    @include before('xl') {
+        font-size: $--font-size-22;
+        line-height: $--line-height-26;
+    }
+
+    @include before('sm') {
+        font-size: $--font-size-20;
+        line-height: $--line-height-22;
+    }
+} 
+
+h3 {
+    margin: 20px 0;
+    font-size: $--font-size-28;
+    line-height: $--line-height-34;
+    font-weight: $--font-weight-medium;
+
+    @include before('xl') {
+        font-size: $--font-size-20;
+        line-height: $--line-height-24;
+    }
+
+    @include before('sm') {
+        font-size: $--font-size-18;
+        line-height: $--line-height-22;
+    }
+} 
+
+
+h4, h5, h6 {
+    margin: 20px 0;
+    font-size: $--font-size-22;
+    line-height: $--line-height-28;
+    font-weight: $--font-weight-medium;
+
+    @include before('xl') {
+        font-size: $--font-size-18;
+        line-height: $--line-height-22;
+    }
+} 
+
+
+p {
+    font-size: $--font-size-18;
+    line-height: $--line-height-24;
+    color: $--color-black-100;
+    margin-bottom: 15px;
+
+    @include before('sm') {
+        font-size: $--font-size-16;
+        line-height: $--line-height-22;
+    }
+}
+
+ul {
+    margin-left: 20px;
+    margin-bottom: 20px;
+    li {
+        padding-left: 20px;
+        position: relative;
+        margin-bottom: 5px;
+
+        &::before {
+            content: '';
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background-color: $--color-red-100;
+            display: inline-block;
+            position: absolute;
+            left: 0;
+            top: 7px;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+
+ol {
+    margin-left: 20px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+
+    li {
+        padding-left: 0;
+        position: relative;
+        margin-bottom: 10px;
+    }
+}
+
+header ul, footer ul {
+    margin: 0;
+}
+
+header ul li, footer ul li {
+    margin: 0;
+    padding: 0;
+}
+
+header ul li::before , footer ul li::before {
+    display: none;
+}
+
+
+strong {
+    font-weight: $--font-weight-black;
+}
+
+
+a {
+    color: $--color-red-100;
+    transition: $--transition-main;
+
+    &:hover {
+        text-decoration: none;
+        color: transparentize($--color-red-100, 0.1);
+        transition: $--transition-main;
+    }
 }
