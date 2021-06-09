@@ -130,3 +130,22 @@ $(window).on('load resize', function() {
     $('.relatedproducts__slaider').slick("unslick");
   }
 });
+
+
+
+$('.production__card-image').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  fade: true,
+  asNavFor: '.production__card-images'
+});
+
+$('.production__card-images').slick({
+  vertical: true,
+  verticalSwiping: true,
+  slidesToShow: 3,
+  autoplay: true,
+  
+  asNavFor: '.production__card-image',
+});

@@ -349,16 +349,79 @@
         padding-top: 50px;
         margin-top: 80px;
 
+        @include before('lg') {
+            margin-top: 10px;
+            padding-top: 30px;
+        }
+
         &--title {
             font-size: $--font-size-22;
             font-weight: $--font-weight-medium;
             margin-bottom: 30px;
+
+            @include before('lg') {
+                font-size: $--font-size-18;
+                line-height: $--line-height-20;
+            }
         }
 
         &--text {
             font-size: $--font-size-18;
             line-height: $--line-height-24;
             color: $--color-black-100;
+
+            @include before('lg') {
+                font-size: $--font-size-14;
+                line-height: $--line-height-20;
+            }
+        }
+    }
+
+    &-image, &-images {
+        margin: 0;
+        padding: 0;   
+        
+        li {
+            &::before {
+                display: none;
+            }
+        }
+    }
+
+    &-image {
+        &--item {
+            max-height: 420px;
+            overflow: hidden;
+        }
+
+        &--main {
+            width: auto;
+            height: 100%;
+            max-height: 420px;
+            max-width: 100%;
+            object-fit: cover;
+            object-position: top;
+            border-radius: $--border-radius;
+        }
+    }
+
+    &-images {
+        margin-top: 30px;
+
+        &--item {
+            width: 140px;
+            height: 140px;
+            overflow: hidden;
+        }
+
+        &--prev {
+            width: auto;
+            width: 140px;
+            height: 140px;
+            object-fit: cover;
+            object-position: top;
+            border-radius: $--border-radius;
+            margin: 0 auto;
         }
     }
 }
@@ -373,32 +436,77 @@
         align-items: center;
         margin-bottom: 40px;
 
-        &--new {
-            font-size: $--font-size-24;
-            font-weight: $--font-weight-medium;
-            color: $--color-red-100;
+        &--old {
+            color: transparentize($--color-black-100, 0.5);
+            margin-right: 10px;
+            font-weight: 500;
+            position: relative;
+
+            .svg__icon {
+                fill: transparentize($--color-black-100, 0.5);
+                width: 10px;
+                height: 10px;
+                margin-left: -4px;
+            }
+
+            &::after {
+                content: '';
+                width: 100%;
+                height: 1px;
+                background-color: transparentize($--color-black-100, 0.5);
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 0;
+            }
         }
 
-        .svg__icon {
-            width: 16px;
-            height: 16px;
-            margin-left: -4px;
-            vertical-align: middle;
+        &--new {
+            font-size: $--font-size-24;
+            font-weight: $--font-weight-black;
+            color: $--color-red-100;
+
+            .svg__icon {
+                width: 16px;
+                height: 16px;
+                margin-left: -4px;
+                vertical-align: middle;
+            }
+        }
+
+        @include before('lg') {
+            margin-bottom: 20px;
         }
     }
 
     .main__button {
         margin: 0;
+        margin-right: 20px;
+
+        @include before('lg') {
+            order: 1;
+            margin-right: 0;
+            margin-top: 20px;
+        }
     }
 
     &-description {
         margin-bottom: 40px;
+        font-size: $--font-size-18;
+        line-height: $--line-height-24;
+
+        @include before('lg') {
+            font-size: $--font-size-14;
+            line-height: $--line-height-18;
+            margin-bottom: 20px;
+        }
     }
 
     &-forms {
         margin-bottom: 40px;
         display: flex;
         align-items: center;
+        flex-wrap: wrap;
 
         &--input {
             border: 1px solid transparentize($--color-black-100, 0.9);
@@ -416,7 +524,6 @@
     }
 
     &-favorites {
-        margin-left: 20px;
 
         &--button {
             background: none;
@@ -451,6 +558,8 @@
         margin: 0;
         padding: 0;
         display: flex;
+        flex-wrap: wrap;
+        max-width: 400px;
         align-items: center;
 
         &--item {
@@ -458,9 +567,15 @@
             display: flex;
             align-items: center;
             margin-right: 35px;
+            margin-bottom: 30px;
 
             &::before {
                 display: none;
+            }
+
+            @include before('lg') {
+                width: 50%;
+                margin-right: 0;
             }
         }
 
