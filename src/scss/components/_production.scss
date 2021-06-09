@@ -377,10 +377,11 @@
         }
     }
 
-    &-image, &-images {
+    &-image,
+    &-images {
         margin: 0;
-        padding: 0;   
-        
+        padding: 0;
+
         li {
             &::before {
                 display: none;
@@ -389,18 +390,19 @@
     }
 
     &-image {
+
         &--item {
             max-height: 420px;
             overflow: hidden;
         }
 
         &--main {
-            width: auto;
-            height: 100%;
+            width: 100%;
+            height: 420px;
             max-height: 420px;
             max-width: 100%;
             object-fit: cover;
-            object-position: top;
+            object-position: center;
             border-radius: $--border-radius;
         }
     }
@@ -421,7 +423,6 @@
             object-fit: cover;
             object-position: top;
             border-radius: $--border-radius;
-            margin: 0 auto;
         }
     }
 }

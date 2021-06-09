@@ -142,10 +142,9 @@ $('.production__card-image').slick({
 });
 
 $('.production__card-images').slick({
-  vertical: true,
-  verticalSwiping: true,
   slidesToShow: 3,
-  autoplay: true,
-  
+  slidesToScroll: 1,
   asNavFor: '.production__card-image',
+  dots: false,
+  focusOnSelect: true
 });
