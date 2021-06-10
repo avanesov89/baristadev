@@ -50,6 +50,7 @@ body {
     position: relative;
     min-height: 110px;
     text-align: center;
+    margin-bottom: 50px;
 
     &::before {
         content: '';
@@ -68,6 +69,7 @@ body {
     @include before('sm') {
         font-size: $--font-size-22;
         line-height: $--line-height-30;
+        margin-bottom: 25px;
     }
 }
 
@@ -124,6 +126,89 @@ body {
     min-height: 400px;
 }
 
+.required {
+    color: $--color-red-100;
+}
+
+
+.main__form {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+
+    @include after('sm') {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 20px;
+    }
+
+    @include after('md') {
+        max-width: 70%;
+        margin: 50px auto 0;
+    }
+
+    &-field {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 30px;
+        width: 100%;
+
+        &--text {
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+    }
+
+    &-button {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        width: 100%;
+    }
+
+    &-licenze {
+        font-size: $--font-size-12;
+        line-height: $--line-height-16;
+        text-align: center;
+        font-weight: $--font-weight-medium;
+    }
+
+    &-label {
+        font-size: $--font-size-14;
+        line-height: $--line-height-20;
+        font-weight: $--font-weight-medium;
+        margin-bottom: 10px;
+    }
+
+    &-input {
+        padding: 5px 15px;
+        height: 45px;
+        border: 1px solid transparentize($--color-black-100, 0.8);
+        border-radius: $--border-radius;
+        font-size: $--font-size-14;
+        box-shadow: 0px 0px 10px rgba(13, 14, 15, 0.1);
+
+        &:focus {
+            border: 1px solid transparentize($--color-black-100, 0.6);
+            outline: none;
+        }
+    }
+
+    &-textarea {
+        padding: 10px 15px;
+        height: 40px;
+        border: 1px solid transparentize($--color-black-100, 0.8);
+        box-shadow: 0px 0px 10px rgba(13, 14, 15, 0.1);
+        border-radius: $--border-radius;
+        font-size: $--font-size-14;
+        min-height: 200px;
+        line-height: $--line-height-20;
+
+        &:focus {
+            border: 1px solid transparentize($--color-black-100, 0.6);
+            outline: none;
+        }
+    }
+}
 
 
 h1 {
