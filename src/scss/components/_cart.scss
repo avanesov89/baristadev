@@ -1,0 +1,120 @@
+.cart__list {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    min-width: 100%;
+
+    thead {
+        th {
+            border-bottom: 2px solid $--color-black-100;
+            font-size: $--font-size-16;
+            font-weight: $--font-weight-medium;
+            padding: 5px 10px;
+
+            &:last-child {
+                text-align: right;
+            }
+        }
+    }
+
+    tbody {
+
+        tr {
+            border-bottom: 1px dashed transparentize($--color-black-100, 0.6);
+        }
+
+        td {
+            padding: 20px 10px 15px;
+
+            &:first-child {
+                width: 170px;
+                min-width: 170px;
+            }
+
+            &:last-child {
+                text-align: right;
+            }
+        }
+    }
+
+    &-img {
+        width: 140px;
+        height: 120px;
+        object-fit: cover;
+        object-position: top;
+        border-radius: $--border-radius;
+    }
+
+    &-link {
+        font-weight: $--font-weight-medium;
+        white-space: nowrap;
+    }
+
+    &-delete {
+        background: none;
+        border: none;
+        color: $--color-black-100;
+        padding: 0;
+        cursor: pointer;
+        font-size: $--font-size-14;
+
+        &:hover,
+        &:focus {
+            color: $--color-red-100;
+            text-decoration: underline;
+        }
+    }
+
+    &-price {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        font-weight: $--font-weight-medium;
+
+        .svg__icon {
+            width: 12px;
+            height: 12px;
+            margin-left: 4px;
+        }
+    }
+
+    &-total {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding-right: 10px;
+        margin-bottom: 20px;
+        font-size: $--font-size-24;
+        font-weight: $--font-weight-medium;
+
+        &--price {
+            margin-left: 5px;
+            color: $--color-red-100;
+            display: flex;
+            align-items: center;
+
+            .svg__icon {
+                margin-left: 3px;
+                width: 15px;
+                height: 15px;
+            }
+        }
+    }
+
+    &-final {
+        display: flex;
+        justify-content: flex-end;
+
+        .main__button {
+            margin-right: 10px;
+        }
+    }
+}
+
+
+.cart__table-block {
+    margin-bottom: 30px;
+    overflow-x: auto;
+    scrollbar-color: #ced4da transparent;
+    scrollbar-width: thin;
+}
