@@ -1,0 +1,30 @@
+.equipment {
+    &__categories {
+        .col {
+            @include col();
+            @include size-lg(9);
+            @include size(12);
+
+            &:first-child {
+                @include size-lg(3);
+            }
+        }
+
+        .production__items {
+            .col {
+                @include col();
+                @include size-lg(4);
+                @include size(12);
+            }
+        }
+    }
+    &__bottom {
+        .col {
+            @include size(12);
+
+            &:first-child {
+                @include size(12);
+            }
+        }
+    }
+}

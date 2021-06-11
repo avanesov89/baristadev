@@ -1677,4 +1677,32 @@ header {
   scrollbar-color: #ced4da transparent;
   scrollbar-width: thin; }
 
+.equipment__categories .col {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 0.9375rem;
+  margin-right: 0.9375rem;
+  width: calc(100% - 1.875rem); }
+  @media screen and (min-width: 1280px) {
+    .equipment__categories .col {
+      width: calc(75% - 1.875rem); } }
+  @media screen and (min-width: 1280px) {
+    .equipment__categories .col:first-child {
+      width: calc(25% - 1.875rem); } }
+
+.equipment__categories .production__items .col {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 0.9375rem;
+  margin-right: 0.9375rem;
+  width: calc(100% - 1.875rem); }
+  @media screen and (min-width: 1280px) {
+    .equipment__categories .production__items .col {
+      width: calc(33.33333% - 1.875rem); } }
+
+.equipment__bottom .col {
+  width: calc(100% - 1.875rem); }
+  .equipment__bottom .col:first-child {
+    width: calc(100% - 1.875rem); }
+
 /*# sourceMappingURL=global.css.map */
