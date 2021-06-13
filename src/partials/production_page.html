@@ -3,7 +3,9 @@
         <div class="row production__card-top">
             <div class="col">
                 <div class="production__card-slaider">
-                    <img src="../img/news_post8.jpg" alt="#" class="production__card-image--main">
+                    <a href="../img/news_post8.jpg" data-fancybox="gallery">
+                        <img src="../img/news_post8.jpg" alt="#" class="production__card-image--main">
+                    </a>
                 </div>
             </div>
             <div class="col">
@@ -37,7 +39,7 @@
                     </div>
                     <div class="production__info-forms">
                         <input type="text" value="1" class="production__info-forms--input">
-                        
+
                         <div class="production__info-favorites">
                             <button class="production__info-favorites--button production__info-favorites--no">
                                 <svg class="svg__icon">
@@ -114,26 +116,26 @@
 
             </div>
         </div>
-        <div class="row">
+        <div class="row production__card-other">
             <div class="col">
-                <div class="production__card-other">
-                    <div class="production__card-other--title">
-                        Описание:
-                    </div>
-                    <div class="production__card-other--text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
-                    </div>
+                <div class="production__card-other--title">
+                    Описание:
+                </div>
+                <div class="production__card-other--text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
                 </div>
             </div>
+        </div>
+        <div class="row production__card-other">
             <div class="col">
-                <div class="production__card-other">
-                    <div class="production__card-other--title">
-                        Совместимость:
-                    </div>
+                <div class="production__card-other--title">
+                    Совместимость:
                 </div>
+
+                @include('compatibility.html')
             </div>
         </div>
     </div>

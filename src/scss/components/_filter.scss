@@ -1,0 +1,94 @@
+.filter__main {
+    border: 1px solid transparentize($--color-black-100, 0.9);
+    box-shadow: $--box-shadow-100;
+    padding: 20px 20px 30px;
+    border-radius: $--border-radius;
+
+    &-block {
+        margin-bottom: 20px;
+        padding-top: 20px;
+        border-top: 1px dashed transparentize($--color-black-100, 0.7);
+
+        &:first-child {
+            border-top: none;
+            padding-top: 0;
+        }
+    }
+
+    &-title {
+        margin-bottom: 15px;
+        font-size: $--font-size-14;
+        line-height: $--line-height-22;
+        font-weight: $--font-weight-medium;
+        color: $--color-black-100;
+    }
+
+    &-items {
+        display: flex;
+        flex-direction: column;
+
+        &--block {
+            margin-bottom: 15px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &-checkbox {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+
+        &+label {
+            display: inline-flex;
+            align-items: center;
+            user-select: none;
+        }
+
+        &+label::before {
+            content: '';
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            flex-shrink: 0;
+            flex-grow: 0;
+            border: 1px solid transparentize($--color-black-100, 0.7);
+            border-radius: $--border-radius;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 50% 50%;
+            margin-right: 10px;
+        }
+
+        &:checked+label::before {
+            content: '';
+            border-color: $--color-red-100;
+            background-color: $--color-red-100;
+            background-image: url(../img/checkedIcon.svg);
+        }
+    }
+
+    &-label {
+        font-size: $--font-size-14;
+        line-height: $--line-height-22;
+        color: $--color-black-100;
+    }
+
+    .main__button {
+        margin-top: 50px;
+        font-size: $--font-size-14;
+        line-height: $--line-height-22;
+        border-color: $--color-red-100;
+        color: $--color-red-100;
+        background-color: $--color-white-100;
+        padding: 7px 35px;
+
+        &:hover,
+        &:focus {
+            color: $--color-white-100;
+            background-color: $--color-red-100;
+        }
+    }
+}

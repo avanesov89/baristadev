@@ -132,6 +132,23 @@ $(window).on('load resize', function() {
 });
 
 
+$(window).on('load resize', function() {
+  if ($(window).width() > 1280) {
+    $('.compatibility__items').slick({
+      infinite: true,
+      slidesToShow: 4,
+      infinite: false,
+      slidesToScroll: 1,
+      dots: false,
+      prevArrow: "<div class='slaider__icons slaider__icons-prev'><img src='img/arrow_prev_big.svg' class='slaider__icons-img' alt='prev'></div>",
+      nextArrow: "<div class='slaider__icons slaider__icons-next'><img src='img/arrow_next_big.svg' class='slaider__icons-img' alt='next'></div>",
+    });
+  } else {
+    $('.compatibility__items').slick("unslick");
+  }
+});
+
+
 
 $('.production__card-image').slick({
   slidesToShow: 1,
@@ -147,4 +164,24 @@ $('.production__card-images').slick({
   asNavFor: '.production__card-image',
   dots: false,
   focusOnSelect: true
+});
+
+
+
+
+$(function() {
+  $('.scrollup').click(function() {
+    $("html, body").animate({
+      scrollTop:0
+    },1000);
+  })
+})
+
+$(window).scroll(function() {
+  if ($(this).scrollTop()>200) {
+    $('.scrollup').fadeIn();
+  }
+  else {
+    $('.scrollup').fadeOut();
+  }
 });

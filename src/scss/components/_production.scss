@@ -222,11 +222,14 @@
         align-items: center;
         justify-content: space-between;
         padding: 20px 0 15px;
+        margin-bottom: 20px;
         border-bottom: 1px dashed transparentize($--color-black-100, 0.7);
     }
 
     h5 {
-        max-width: 75%;
+        margin: 0;
+        width: 100%;
+        overflow: hidden;
     }
 
     &-link {
@@ -290,7 +293,7 @@
     &-text {
         font-size: $--font-size-14;
         line-height: $--line-height-18;
-        margin: 20px 0;
+        margin: 0 0 20px;
 
         @include after('lg') {
             max-height: 54px;
@@ -326,16 +329,16 @@
     .col {
         @include size-sm(12);
     }
-    
+
     &-top {
         .col {
             @include size-sm(12);
             @include size-md(6);
-    
+
             &:nth-child(1) {
                 @include size-md(5);
             }
-    
+
             &:nth-child(2) {
                 @include size-md(1);
             }
@@ -344,17 +347,20 @@
 
     &-other {
 
-        .col {
-            @include size-sm(12);
-
-            &:nth-child(1) {
-                @include size-sm(12);
-            }
-        }
-
-        border-top: 1px solid transparentize($--color-black-100, 0.9);
+        position: relative;
         padding-top: 50px;
         margin-top: 80px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0.9375rem;
+            right: 0.9375rem;
+            background-color: transparentize($--color-black-100, 0.9);
+            height: 1px;
+            width: auto;
+        }
 
         @include before('lg') {
             margin-top: 10px;
@@ -380,6 +386,39 @@
             @include before('lg') {
                 font-size: $--font-size-14;
                 line-height: $--line-height-20;
+            }
+        }
+
+        &--table {
+            width: 90%;
+
+            @include before('lg') {
+                width: 100%;
+                margin-bottom: 40px;
+            }
+
+            tr {
+                padding: 10px;
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                font-size: $--font-size-14;
+
+                &:nth-child(2n+1) {
+                    border-radius: $--border-radius;
+                    background-color: rgba(127, 128, 130, 0.1);
+                }
+            }
+
+            td {
+                &:last-child {
+                    text-align: right;
+                    font-weight: $--font-weight-medium;
+
+                    @include before('lg') {
+                        min-width: 35%;
+                    }
+                }
             }
         }
     }

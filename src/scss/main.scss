@@ -21,7 +21,6 @@ body {
 
 .row {
     @include row-flex();
-    justify-content: space-between;
 }
 
 .col {
@@ -107,6 +106,29 @@ body {
     opacity: 1;
     transition: $--transition-main;
     border-radius: $--border-radius;
+
+    &-main {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.hover__image-product {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparentize($--color-black-100, 0.7);
+    opacity: 0;
+    transition: $--transition-main;
+    border-radius: $--border-radius;
+
+    &:hover,
+    &:focus {
+        opacity: 1;
+    }
 }
 
 
@@ -449,7 +471,8 @@ a {
             margin-bottom: 10px;
         }
 
-        &:hover, &:focus {
+        &:hover,
+        &:focus {
             color: transparentize($--color-red-100, 0.1);
             transition: $--transition-main;
             text-decoration: underline;
@@ -475,6 +498,7 @@ a {
     margin: 0;
     display: flex;
     flex-wrap: wrap;
+
     li {
         padding: 10px 20px;
         margin: 0;
@@ -483,10 +507,10 @@ a {
             display: none;
         }
     }
-    
+
     &__table {
         max-width: 850px;
-        
+
         &-item {
             display: grid;
             align-items: center;
@@ -507,7 +531,8 @@ a {
             font-weight: $--font-weight-medium;
         }
 
-        &-phone, &-email {
+        &-phone,
+        &-email {
             color: $--color-black-100;
         }
 
@@ -586,7 +611,7 @@ details {
 
         summary {
 
-            & ~ * {
+            &~* {
                 opacity: 1;
             }
 
@@ -600,5 +625,24 @@ details {
                 content: '(скрыть список)';
             }
         }
+    }
+}
+
+
+
+
+.scrollup {
+    position: fixed;
+    background-color: $--color-red-100;
+    right: 20px;
+    bottom: 20px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: none;
+
+    .svg__icon {
+        width: 30px;
+        height: 30px;
     }
 }
