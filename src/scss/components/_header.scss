@@ -2,6 +2,10 @@ header {
     background: #fff;
     box-shadow: $--box-shadow;
     padding: 20px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99;
 
     @media screen and (max-width: 768px) {
         padding: 13px 0;

@@ -91,4 +91,8 @@
             background-color: $--color-red-100;
         }
     }
+
+    @include before('lg') {
+        display: none;
+    }
 }
