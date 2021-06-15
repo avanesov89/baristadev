@@ -114,7 +114,7 @@
         top: 15px;
         display: block;
         background-color: unset;
-        background-image: url(../../img/arrowDownIcon.svg);
+        background-image: url(../img/arrowDownIcon.svg);
         background-size: 10px 10px;
         left: auto; }
         .a-menu .menu__item-drop::before:hover {
@@ -164,7 +164,12 @@
       text-decoration: none;
       font-size: 12px; }
       .a-menu .sub-menu__link:before {
-        content: '›';
+        content: '';
+        background-image: url(../img/arrowDownIcon.svg);
+        background-repeat: no-repeat;
+        background-position: 0 50%;
+        transform: rotate(-90deg);
+        background-size: 5px 5px;
         height: 30px;
         width: 5px;
         position: absolute;
