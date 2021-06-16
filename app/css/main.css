@@ -1151,6 +1151,11 @@ header {
   -o-object-position: center;
   object-position: center;
   border-radius: 4px; }
+  @media screen and (min-width: 768px) {
+    .production__card-image--main {
+      width: 70%;
+      margin: 0 auto;
+      display: block; } }
 
 .production__card-images {
   margin-top: 30px; }
@@ -1946,12 +1951,13 @@ header {
   .compatibility__item-images {
     max-height: 230px;
     height: 230px;
-    width: 100%;
+    width: 50%;
     -o-object-fit: cover;
     object-fit: cover;
     border-radius: 4px;
     -o-object-position: top;
-    object-position: top; }
+    object-position: top;
+    margin: 0 auto; }
   .compatibility__item-status {
     position: absolute;
     top: 20px;

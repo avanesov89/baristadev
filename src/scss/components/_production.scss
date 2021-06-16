@@ -454,6 +454,12 @@
             object-fit: cover;
             object-position: center;
             border-radius: $--border-radius;
+
+            @include after('sm') {
+                width: 70%;
+                margin: 0 auto;
+                display: block;
+            }
         }
     }
 

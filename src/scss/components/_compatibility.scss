@@ -103,10 +103,11 @@
         &-images {
             max-height: 230px;
             height: 230px;
-            width: 100%;
+            width: 50%;
             object-fit: cover;
             border-radius: $--border-radius;
             object-position: top;
+            margin: 0 auto;
         }
 
         &-status {
